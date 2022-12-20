@@ -1,0 +1,7 @@
+{
+  "name": "ionic-flotte",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -51,5 +51,24 @@ public class Avion {
     public void setPhoto(String phot){
         photo=phot;
     }
+    @Column(name ="nombreplace")
+    private int nbplace;
+    public int getNbplace() {
+        return nbplace;
+    }
+    public void setNbplace(int nbplace) {
+        this.nbplace = nbplace;
+    }
+
+    @ManyToOne(targetEntity = Marque.class)
+    @JoinColumn(name = "id_marque",referencedColumnName = "id_marque")
+    private Marque marque;
+    public Marque getMarque() {
+        return marque;
+    }
+    public void setMarque(Marque marque) {
+        this.marque = marque;
+    }
+
 
 }

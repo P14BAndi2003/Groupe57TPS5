@@ -54,3 +54,23 @@ insert into utilisateur(nom, mdp)values('test','test');
 
 
 alter table Avion add column nombrePlace int;
+
+update Avion set nombrePlace=50 where id_Avion=1;
+update Avion set nombrePlace=80 where id_Avion=2;
+update Avion set nombrePlace=100 where id_Avion=3;
+
+
+create table marque (
+    id_marque serial primary key,
+    marque varchar(50) not null
+);
+
+alter table Avion add column id_marque int;
+alter table Avion add foreign key (id_marque) references marque(id_marque);
+
+
+insert into marque(marque) values('AirBus'),('Boeing');
+
+update Avion set id_marque=1 where id_Avion=1;
+update Avion set id_marque=2 where id_Avion=2;
+update Avion set id_marque=2 where id_Avion=3;

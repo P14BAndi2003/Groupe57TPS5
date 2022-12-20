@@ -51,3 +51,6 @@ create table utilisateur(
 );
 
 insert into utilisateur(nom, mdp)values('test','test');
+
+
+alter table Avion add column nombrePlace int not null;

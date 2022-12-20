@@ -41,3 +41,13 @@ insert into Kilometrage(id_Avion,date,debutkm,finkm) values(1,'2022-12-10',1000,
 insert into typeEntretien(type) values('vidange'),('pneu');
 
 insert into Entretien(id_type,id_Avion,date) values(1,1,'2022-12-01'),(1,2,'2022-12-02'),(1,3,'2022-12-03');
+
+
+create table utilisateur(
+    id Serial PRIMARY KEY,
+    nom VARCHAR(30) not null,
+    mdp VARCHAR(20) not null,
+    token VARCHAR(70)
+);
+
+insert into utilisateur(nom, mdp)values('test','test');
